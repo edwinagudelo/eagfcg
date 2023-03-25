@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="eagcfg">
+</Property><Property Name="Solution File" Value="C:\Users\Edwin\Documents\Visual Studio 2008\Projects\eagcfg\eagcfg.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Edwin\Documents\Visual Studio 2008\Projects\eagcfg\eagcfg.suo">
+</Property><Property Name="Date" Value="miércoles, 3 de enero de 2018">
+</Property><Property Name="Time" Value="19:50">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="eagcfg.sln" Description="File successfully backed up as C:\Users\Edwin\Documents\Visual Studio 2008\Projects\eagcfg\eagcfg.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="eagcfg.suo" Description="File successfully backed up as C:\Users\Edwin\Documents\Visual Studio 2008\Projects\eagcfg\eagcfg.suo.old">
+</Event><Event ErrorLevel="0" Project="eagcfg" Source="eagcfg\eagcfg.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="eagcfg" Source="eagcfg\eagcfg.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="eagcfg" Source="eagcfg\eagcfg.vcproj" Description="Project file successfully backed up as 'C:\Users\Edwin\Documents\Visual Studio 2008\Projects\eagcfg\eagcfg\eagcfg.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="eagcfg" Source="eagcfg\eagcfg.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="eagcfg" Source="eagcfg\eagcfg.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="eagcfg.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="eagcfg.sln" Description="Converted">
+</Event></UpgradeLog>

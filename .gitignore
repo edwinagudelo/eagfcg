@@ -1,0 +1,9 @@
+# Directorios a omitir
+debug/
+release/
+_UpgradeReport_Files/
+
+# Archivos a omitir
+*.ncb
+*.old
+*.user
