@@ -8,4 +8,5 @@ dependencias para ser usadas en otras aplicaciones.
 ## Dependencias
 
 - System.Data.SQLite Version 1.0.119.0
+- log4net 3.0.2.0
 
