@@ -2,6 +2,7 @@
 debug/
 release/
 _UpgradeReport_Files/
+.vs/
 
 # Archivos a omitir
 *.ncb
