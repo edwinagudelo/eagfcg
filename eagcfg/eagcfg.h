@@ -6,9 +6,11 @@
 
 using namespace System;
 using namespace System::IO;
-using namespace System::Data::SQLite;
 using namespace System::Data;
-using namespace System::Windows::Forms;
+
+using namespace log4net;
+using namespace System::Data::SQLite;
+
 
 namespace eagcfg {
 	
@@ -38,6 +40,8 @@ namespace eagcfg {
 		String^ buildConnectionString();
 		bool connect();
 		void prepareSQL(String^ strsql);
+
+		static ILog^ _logger = LogManager::GetLogger("CConfig");
 
 	};
 }

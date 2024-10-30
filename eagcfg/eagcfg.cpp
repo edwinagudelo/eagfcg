@@ -1,5 +1,3 @@
-// This is the main DLL file.
-
 #include "stdafx.h"
 
 #include "eagcfg.h"
@@ -51,7 +49,7 @@ bool CConfig::crear_parametro(String^ parametro, String^ valor, String^ comentar
 		retorno = true;
 	}
 	catch (SQLiteException^ ex) {
-		MessageBox::Show("Error Procesando la creacion del parametro->" + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		_logger->Error("Error Procesando la creacion del parametro->" + ex->Message);
 		retorno = false;
 	}
 	return retorno;
@@ -77,7 +75,7 @@ String^ CConfig::leer_parametro(String^ parametro, String^ path, String^ bd) {
 		lector->Close();
 	}
 	catch (SQLiteException^ ex) {
-		MessageBox::Show("Error Procesando la lectura  del parametro " + parametro + "->" + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		_logger->Error("Error Procesando la lectura  del parametro " + parametro + "->" + ex->Message);
 		retorno = nullptr;
 	}
 	return retorno;
@@ -98,7 +96,7 @@ bool CConfig::actualizar_parametro(String^ parametro, String^ valor, String^ pat
 		retorno = true;
 	}
 	catch (SQLiteException^ ex) {
-		MessageBox::Show("Error Procesando la actualizacion del parametro->" + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		_logger->Error("Error Procesando la actualizacion del parametro->" + ex->Message);
 		retorno = false;
 	}
 	return retorno;
@@ -118,7 +116,7 @@ bool CConfig::borrar_parametro(String^ parametro, String^ path, String^ bd) {
 		retorno = true;
 	}
 	catch (SQLiteException^ ex) {
-		MessageBox::Show("Error Procesando el borrado del parametro->" + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		_logger->Error("Error Procesando el borrado del parametro->" + ex->Message);
 		retorno = false;
 	}
 	return retorno;
@@ -142,7 +140,7 @@ bool CConfig::crear_bd(String^ path, String^ bd)
 		retorno = true;
 	}
 	catch (SQLiteException^ ex) {
-		MessageBox::Show("Error Procesando el borrado del parametro->" + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		_logger->Error("Error Procesando el borrado del parametro->" + ex->Message);
 		retorno = false;
 	}
 	return retorno;
@@ -166,7 +164,7 @@ bool CConfig::connect()
 		}
 	}
 	catch (Exception^ ex) {
-		MessageBox::Show("Error conectando a la base de datos ->" + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		_logger->Error("Error conectando a la base de datos ->" + ex->Message);
 		return false;
 	}
 	return true;

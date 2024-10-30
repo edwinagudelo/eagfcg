@@ -109,6 +109,9 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\Documents\Libs\apache-log4net-binaries-3.0.2\net462\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
@@ -116,6 +119,7 @@
     <Reference Include="System.Data">
       <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>true</Private>
     </Reference>
     <Reference Include="System.Data.SQLite">
       <HintPath>..\..\..\..\Documents\Libs\SQLite.NET\System.Data.SQLite.dll</HintPath>
@@ -155,7 +159,7 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <Text Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
