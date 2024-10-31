@@ -13,8 +13,11 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
+    - name: Navigate to Workspace
+      run: cd $GITHUB_WORKSPACE
+
     - name: Create build directory
       run: mkdir build
 
     - name: Compile the solution
-      run: msbuild eagfcg\eagcfg.sln -t:rebuild -verbosity:diag -property:Configuration=Release
+      run: msbuild eagcfg.sln -t:rebuild -verbosity:diag -property:Configuration=Release
