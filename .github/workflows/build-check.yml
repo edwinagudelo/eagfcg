@@ -17,4 +17,4 @@ jobs:
       run: mkdir build
 
     - name: Compile the solution
-      run: msbuild eagfcg\eagcfg.vcxproj -t:rebuild -verbosity:diag -property:Configuration=Release
+      run: msbuild eagfcg\eagcfg.sln -t:rebuild -verbosity:diag -property:Configuration=Release
