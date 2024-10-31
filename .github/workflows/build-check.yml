@@ -1,0 +1,51 @@
+# Pipeline to check code
+name: Check the code
+on: 
+  pull_request:
+    branches: [main,development]
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    name: Build and check
+    runs-on: windows-latest
+
+    steps:
+    - name: Get Code 
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Navigate to Workspace
+      run: cd $GITHUB_WORKSPACE
+
+    - name: Compile the solution
+      run: msbuild eagcfg.sln -t:rebuild -property:Configuration=Release -property:Platform=x64
+
+  upload-artifact:
+    name: Compile and Upload
+    runs-on: windows-latest
+    needs: build
+    if: ${{ github.ref == 'ref/head/main' }}
+
+    steps:
+      - name: Get Code 
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Navigate to Workspace
+        run: cd $GITHUB_WORKSPACE
+
+      - name: Compile the solution
+        run: msbuild eagcfg.sln -t:rebuild -property:Configuration=Release -property:Platform=x64
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with: 
+          name: eagfcfg
+          path: x64/Release
