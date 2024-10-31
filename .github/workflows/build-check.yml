@@ -3,6 +3,9 @@ name: Check the code
 on: 
   pull_request:
     branches: [main,development]
+  push:
+    branches:
+      - main 
 
 jobs:
   build:
