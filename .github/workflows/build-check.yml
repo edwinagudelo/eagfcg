@@ -1,6 +1,6 @@
 # Pipeline to check code
 
-on: push
+on: pull_request
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
       run: mkdir build
 
     - name: Compile the solution
-      run: msbuild eagcfg.sln -t:rebuild -property:Configuration=Release
+      run: msbuild eagcfg.sln -t:rebuild -property:Configuration=Release -property:Platform=x64
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
