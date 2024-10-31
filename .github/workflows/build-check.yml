@@ -21,3 +21,9 @@ jobs:
 
     - name: Compile the solution
       run: msbuild eagcfg.sln -t:rebuild -property:Configuration=Release
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with: 
+        name: eagfcfg
+        path: Release
