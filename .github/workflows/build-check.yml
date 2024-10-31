@@ -1,0 +1,20 @@
+# Pipeline to check code
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Get Code 
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Create build directory
+      run: mkdir build
+
+    - name: Compile the solution
+      run: msbuild eagfcg\eagcfg.vcxproj -t:rebuild -verbosity:diag -property:Configuration=Release
